@@ -1,90 +1,83 @@
-# Galaxy Pets: Collect and Train Your Cosmic Companions
-
-For this programming assignment in Java, you are stepping into the shoes of a cosmic trainer, embarking on a journey through the universe to collect and train Galaxy Pets. These are mythical creatures with unique abilities and attributes that you'll be modeling in Java.
+# Crafting Cocktails in Java
 
 ## Deadline
-This assignment is due before the next scheduled class.
+This work is due by the end of the next class period.
 
 ## Instructions
-For instructions on how to complete and submit this assignment, please refer to the assignments section of the course instructions reachable via [assignments section of our course webpage](https://assignments.example.com).
+For specific information on how to complete this assignment and submit it, please refer to the assignments section of the course portal.
 
 ## Preparation
-
-- Complete and understand all questions in Module 2: "Exploring Object-Oriented Programming".
-- Access the OLI material through Canvas or directly via [programming course materials](https://programmingmaterials.example.com).
-
-Note: The OLI material and tasks this year may not perfectly align, so it's okay to read ahead if you did not find everything mentioned.
+- Complete and answer all questions in "Understanding Objects and Classes in Java" from the course material.
+- Review the relevant sections on classes, objects, constructors, and methods in the Java documentation or any standard Java programming book.
 
 ## Learning Goals
+This assignment will help reinforce the following key concepts:
+* Understanding and designing Java classes
+* Implementing instance fields
+* Understanding constructors in Java
+* Creating and using getters and setters
+* Employing the dot notation for accessing object properties
+* Basic usage of the `main` method
+* Understanding scope and variable shadowing
 
-The goals for this week include understanding how to:
-- Design Java classes.
-- Implement fields and methods within a class.
-- Utilize the `main` method for testing.
-- Understand the concept of object encapsulation.
-- Manage object interaction within a Java application.
+## Assignment
 
-## Troubleshooting Guide
+Imagine you're working as a JAVA Developer at a high-end bar. The owner, inspired by the digital transformation wave, desires a software solution to model their cocktail recipes digitally. Your task is to model these cocktails using Java! They believe this innovative approach will enhance their ability to craft, customize, and recommend cocktails based on customer preferences.
 
-1. Browse the [posted questions](https://forum.example.com/issues) related to this week's assignment. Are others experiencing the same issue?
-2. If not, create a [New Question](https://forum.example.com/issues/new) with a descriptive title beginning with "Week *x*: *summary of problem*".
-3. Seek out further help at the [weekly help sessions](https://helpsessions.example.com) hosted by our team.
+### Exercise 1: Data Modeling
 
-Collaboration with peers is encouraged, but please avoid sharing exact solutions.
+Initiate your journey by creating a new Java file named `Cocktail.java` within the `src` folder. This file should define the `Cocktail` class. 
 
-## Assignment Details
+In this first step, define your `Cocktail` class with the following characteristics as instance fields:
+- `String` name
+- `String` mainIngredient
+- `int` volumeInMl
+- `boolean` isAlcoholic
+- `double` price
 
-Your journey through the galactic frontier begins with the creation of unique Galaxy Pets crafted from the essence of cosmic phenomena. Dive into this universe by modeling these creatures in Java. Let your imagination run wild; perhaps a Starlion with the roar of a collapsing star, or a Nebulupi, a wolf made from the gas of a nebulous cloud.
+After defining the class, proceed to craft your very first cocktail. Add the main method provided in the example below to your `Cocktail` class and instantiate a `Cocktail` object within it:
 
-### Task 1: Class Creation
+### Exercise 2: Creating More Cocktails
 
-Start by creating a file named `GalaxyPet.java` inside the `src` directory. Declare the GalaxyPet class within this file.
+After successfully modeling your first cocktail, explore the wide variety of cocktails by creating two more, making a total of three. 
 
-### Task 2: Defining Properties
+You may realize this method is not scalable if you want to add many cocktails. We will address this by using Java's object-oriented features like constructors and encapsulation in the following exercises.
 
-Our Galaxy Pets need characteristics. Define the following fields within the GalaxyPet class, without assigning any initial values:
+### Exercise 3: Encapsulation with Getters and Setters
 
-- String name
-- int energyLevel
-- int cosmicPower
-- int speed
-- boolean asleep
+Time to add some privacy! Change the access modifiers of instance fields in your `Cocktail` class to `private`. This encapsulates the data and prevents direct modifications from outside the class.
 
-### Task 3: Spawning Galaxy Pets
+To allow controlled access to these fields, implement getter and setter methods for each field. Remember to follow Java naming conventions (`getXXX` and `setXXX` where `XXX` is the name of the field).
 
-In the `main` method of your GalaxyPet class, create and instantiate a "Starlion" with initial values for its characteristics. Use the dot operator to set these attributes directly for now.
+### Exercise 4: Constructors Are Here!
 
-### Task 4: Encapsulation with Getters and Setters
+Creating cocktails one step at a time is cumbersome. Simplify this process by creating a constructor for the `Cocktail` class. The constructor should take arguments for each field of the class and assign them accordingly.
 
-To encapsulate the inner workings of our Galaxy Pets, change the access modifiers of your fields to `private`. Then, implement getters and setters for each property.
+This allows you to create new `Cocktail` objects while specifying their attributes at the time of creation.
 
-### Task 5: Constructing with Constructors
+### Exercise 5: Array of Cocktails
 
-Implement a constructor for the GalaxyPet class that allows setting all characteristics upon instantiation. Create a second pet, "Nebulupi", using this constructor.
+Craft a collection of your favorite cocktails by creating an array of `Cocktail` objects. Demonstrate how to populate this array with different cocktails, showcasing the variety and flexibility of using objects.
 
-### Task 6: Display Information
+### Exercise 6: Displaying Cocktail Information
 
-Create a method named `displayInfo` within the GalaxyPet class that prints out all information about the pet to the console.
+For each cocktail, it is crucial to display its information clearly. Implement a method called `displayInfo()` within the `Cocktail` class. This method should print all information about the cocktail to the terminal.
 
-### Task 7: The Cosmic Challenge
+### Exercise 7: Cocktail Customization
 
-Galaxy Pets can challenge each other to cosmic duels. Implement a method named `challenge` where one pet can challenge another. The outcome will determine which pet gains cosmic power. Incorporate simple logic based on your chosen attributes.
+Imagine a customer wants their cocktail to be a bit stronger or sweeter. Implement a method named `customizeCocktail(String ingredient, int volumeChange)` that allows customization of the main ingredient or the volume of the cocktail. This method should reflect the changes in the object's state and print a message indicating the customization has been applied.
 
-### Task 8: Understanding Scope and Shadowing
+## Understanding Scope and Variable Shadowing
 
-Review examples of scope and variable shadowing provided in the reading materials. Be prepared to adjust your implementation if necessary, focusing on proper usage of the `this` keyword.
+Reflect on the concepts of scope and variable shadowing through practical examples. Review and understand how local variables in methods can shadow class fields and how to overcome this using the `this` keyword.
 
-## Final Checklist
+## Checklist
+- Create and detail the Cocktail class with appropriate fields.
+- Implement encapsulation by using private access modifiers and providing getters and setters.
+- Define and use a constructor to simplify object creation.
+- Explore creating an array of objects for more complex data manipulation.
+- Demonstrate the ability to modify object states through custom methods.
+- Understand and apply the concepts of scope and the significance of the `this` keyword.
 
-- [ ] Created and developed the GalaxyPet class with fields and methods.
-- [ ] Utilized getters and setters for encapsulation.
-- [ ] Implemented constructors for easy object instantiation.
-- [ ] Developed a method displaying a pet's info.
-- [ ] Enabled Galaxy Pets to challenge each other.
-
-## Bugs and Errors?
-
-If you encounter any inconsistencies or errors with this assignment, please report them by creating a [New Issue](https://forum.example.com/issues/new) with the title "Week *x* Error: *summary of error here*". Contributors identifying bugs will be acknowledged.
-
-
-This personalized task should help the student understand the same core programming concepts as the model task, framed around an engaging theme of collecting and training cosmic creatures.
+## Feedback and Assistance
+If you encounter difficulties, consult the documentation provided, reach out for peer advice, or seek instructor guidance during office hours. Remember, understanding these foundational concepts is crucial for your journey as a Java developer.
